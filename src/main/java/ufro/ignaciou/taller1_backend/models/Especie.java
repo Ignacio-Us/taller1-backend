@@ -1,7 +1,5 @@
 package ufro.ignaciou.taller1_backend.models;
 
-import java.util.Set;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -25,11 +23,11 @@ public class Especie {
     private Enum nombre;
 
     @OneToOne(mappedBy = "especie")
-    private Set<Counter> counters;
+    private Counter counter;
 
     @OneToOne(mappedBy = "especie")
-    private Set<Rival> rivals;
+    private Rival rival;
 
     @OneToOne(mappedBy = "especie")
-    private Set<Campeon> campeons;
+    private Campeon campeon;
 }
