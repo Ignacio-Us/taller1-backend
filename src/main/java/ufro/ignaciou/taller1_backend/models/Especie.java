@@ -29,4 +29,7 @@ public class Especie {
 
     @OneToOne(mappedBy = "especie")
     private Set<Rival> rivals;
+
+    @OneToOne(mappedBy = "especie")
+    private Set<Campeon> campeons;
 }

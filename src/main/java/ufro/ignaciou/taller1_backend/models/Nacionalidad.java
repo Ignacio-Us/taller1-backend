@@ -29,4 +29,7 @@ public class Nacionalidad {
 
     @OneToOne(mappedBy = "nacionalidad")
     private Set<Rival> rivals;
+
+    @OneToOne(mappedBy = "nacionalidad")
+    private Set<Campeon> campeons;
 }
