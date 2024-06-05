@@ -26,4 +26,7 @@ public class Especie {
 
     @OneToOne(mappedBy = "especie")
     private Set<Counter> counters;
+
+    @OneToOne(mappedBy = "especie")
+    private Set<Rival> rivals;
 }
