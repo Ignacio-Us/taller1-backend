@@ -6,6 +6,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 import lombok.Data;
@@ -48,4 +49,12 @@ public class Campeon {
     @OneToOne
     @JoinColumn(name = "especie_id_especie")
     private Especie especie;
+
+    @ManyToOne
+    @JoinColumn(name = "counter_id_counter")
+    private Counter counter;
+
+    @ManyToOne
+    @JoinColumn(name = "rival_id_rival")
+    private Rival rival;
 }
