@@ -23,44 +23,44 @@ public class Campeon {
     
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
-    @Column(name = "id_campeon")
+    @Column(name = "id_campeon", nullable = false)
     private Integer idCampeon;
     
-    @Column(name = "tipo_ataque")
+    @Column(name = "tipo_ataque", nullable = false)
     private String tipoAtaque;
 
-    @Column(name = "vida_base")
+    @Column(name = "vida_base", nullable = false)
     private Integer vidaBase;
 
-    @Column(name = "mana_bool")
+    @Column(name = "mana_bool", nullable = false)
     private Boolean manaBool;
 
-    @Column(name = "energia_bool")
+    @Column(name = "energia_bool", nullable = false)
     private Boolean energiaBool;
 
-    @Column(name = "velocidad_ataque_base")
+    @Column(name = "velocidad_ataque_base", nullable = false)
     private Float velocidadAtaqueBase;
 
-    @Column(name = "velocidad_movimiento_base")
+    @Column(name = "velocidad_movimiento_base", nullable = false)
     private Float velocidadMovimientoBase;
 
-    @Column(name = "nombre")
+    @Column(name = "nombre", nullable = false)
     private String nombre;
 
     @OneToOne
-    @JoinColumn(name = "nacionalidad_id_nacionalidad")
+    @JoinColumn(name = "nacionalidad_id_nacionalidad", nullable = false)
     private Nacionalidad nacionalidad;
 
     @OneToOne
-    @JoinColumn(name = "especie_id_especie")
+    @JoinColumn(name = "especie_id_especie", nullable = false)
     private Especie especie;
 
     @ManyToOne
-    @JoinColumn(name = "counter_id_counter")
+    @JoinColumn(name = "counter_id_counter", nullable = false)
     private Counter counter;
 
     @ManyToOne
-    @JoinColumn(name = "rival_id_rival")
+    @JoinColumn(name = "rival_id_rival", nullable = false)
     private Rival rival;
 
     @ManyToMany

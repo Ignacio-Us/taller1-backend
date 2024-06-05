@@ -16,10 +16,10 @@ public class Especie {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_especie")
+    @Column(name = "id_especie", nullable = false)
     private Integer idEspecie;
 
-    @Column(name = "nombre")
+    @Column(name = "nombre", nullable = false)
     private Enum nombre;
 
     @OneToOne(mappedBy = "especie")

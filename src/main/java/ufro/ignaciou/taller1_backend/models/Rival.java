@@ -20,18 +20,18 @@ public class Rival {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_rival")
+    @Column(name = "id_rival", nullable = false)
     private Integer idRival;
 
-    @Column(name = "nombre")
+    @Column(name = "nombre", nullable = false)
     private String nombre;
 
     @OneToOne
-    @JoinColumn(name = "nacionalidad_id_nacionalidad")
+    @JoinColumn(name = "nacionalidad_id_nacionalidad", nullable = false)
     private Nacionalidad nacionalidad;
     
     @OneToOne
-    @JoinColumn(name = "especie_id_especie")
+    @JoinColumn(name = "especie_id_especie", nullable = false)
     private Especie especie;
 
     @OneToMany(mappedBy = "rival")

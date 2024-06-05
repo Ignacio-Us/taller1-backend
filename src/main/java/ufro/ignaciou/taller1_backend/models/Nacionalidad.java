@@ -16,10 +16,10 @@ public class Nacionalidad {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_nacionalidad")
+    @Column(name = "id_nacionalidad", nullable = false)
     private Integer idNacionalidad;
 
-    @Column(name = "nombre")
+    @Column(name = "nombre", nullable = false)
     private Enum nombre;
 
     @OneToOne(mappedBy = "nacionalidad")

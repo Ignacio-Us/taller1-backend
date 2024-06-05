@@ -18,13 +18,13 @@ public class Interaccion {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_interaccion")
+    @Column(name = "id_interaccion", nullable = false)
     private Integer idInteraccion;
     
-    @Column(name = "nombre_interaccion")
+    @Column(name = "nombre_interaccion", nullable = false)
     private String nombreInteraccion;
 
-    @Column(name = "limite_interaccion")
+    @Column(name = "limite_interaccion", nullable = false)
     private Integer limiteInteraccion;
 
     @ManyToMany(mappedBy = "interaccions")

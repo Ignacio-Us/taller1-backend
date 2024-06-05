@@ -19,24 +19,24 @@ import lombok.Data;
 public class Counter {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_counter")
+    @Column(name = "id_counter", nullable = false)
     private Integer idCounter;
 
-    @Column(name = "nombre")
+    @Column(name = "nombre", nullable = false)
     private String nombre;
 
-    @Column(name = "porcentaje_victoria")
+    @Column(name = "porcentaje_victoria", nullable = false)
     private Float porcentajeVictoria;
 
-    @Column(name = "porcentaje_derrota")
+    @Column(name = "porcentaje_derrota", nullable = false)
     private Float porcentajeDerrota;
 
     @OneToOne
-    @JoinColumn(name = "nacionalidad_id_nacionalidad")
+    @JoinColumn(name = "nacionalidad_id_nacionalidad", nullable = false)
     private Nacionalidad nacionalidad;
     
     @OneToOne
-    @JoinColumn(name = "especie_id_especie")
+    @JoinColumn(name = "especie_id_especie", nullable = false)
     private Especie especie;
 
     @OneToMany(mappedBy = "counter")
