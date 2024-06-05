@@ -1,11 +1,15 @@
 package ufro.ignaciou.taller1_backend.models;
 
+import java.util.Set;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
+import jakarta.persistence.JoinTable;
+import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
@@ -58,4 +62,12 @@ public class Campeon {
     @ManyToOne
     @JoinColumn(name = "rival_id_rival")
     private Rival rival;
+
+    @ManyToMany
+    @JoinTable(
+        name = "campeon_has_interaccion",
+        joinColumns = @JoinColumn(name = "campeon_id_campeon"),
+        inverseJoinColumns = @JoinColumn(name = "interaccion_id_interaccion")
+    )
+    private Set<Interaccion> interaccions;
 }
