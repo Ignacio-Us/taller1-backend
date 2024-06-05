@@ -9,6 +9,7 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
+import jakarta.persistence.criteria.CriteriaBuilder.In;
 import lombok.Data;
 
 @Entity
@@ -19,19 +20,19 @@ public class Campeon {
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
     @Column(name = "id_campeon")
-    private Long idCampeon;
+    private Integer idCampeon;
     
     @Column(name = "tipo_ataque")
     private String tipoAtaque;
 
     @Column(name = "vida_base")
-    private Long vidaBase;
+    private Integer vidaBase;
 
     @Column(name = "mana_bool")
-    private Short manaBool;
+    private Boolean manaBool;
 
     @Column(name = "energia_bool")
-    private Short energiaBool;
+    private Boolean energiaBool;
 
     @Column(name = "velocidad_ataque_base")
     private Float velocidadAtaqueBase;

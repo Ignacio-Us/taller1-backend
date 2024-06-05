@@ -17,7 +17,7 @@ public class Especie {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_especie")
-    private Long idEspecie;
+    private Integer idEspecie;
 
     @Column(name = "nombre")
     private Enum nombre;

@@ -21,7 +21,7 @@ public class Rival {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_rival")
-    private Long idRival;
+    private Integer idRival;
 
     @Column(name = "nombre")
     private String nombre;

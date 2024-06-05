@@ -16,11 +16,11 @@ public class Interaccion {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_interaccion")
-    private Long idInteraccion;
+    private Integer idInteraccion;
     
     @Column(name = "nombre_interaccion")
     private String nombreInteraccion;
 
     @Column(name = "limite_interaccion")
-    private Long limiteInteraccion;
+    private Integer limiteInteraccion;
 }

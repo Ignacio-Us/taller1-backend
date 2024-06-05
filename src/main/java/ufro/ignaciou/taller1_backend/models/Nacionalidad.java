@@ -17,7 +17,7 @@ public class Nacionalidad {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_nacionalidad")
-    private Long idNacionalidad;
+    private Integer idNacionalidad;
 
     @Column(name = "nombre")
     private Enum nombre;

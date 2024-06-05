@@ -20,7 +20,7 @@ public class Counter {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_counter")
-    private Long idCounter;
+    private Integer idCounter;
 
     @Column(name = "nombre")
     private String nombre;
