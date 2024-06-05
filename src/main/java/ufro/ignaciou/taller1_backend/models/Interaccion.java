@@ -15,11 +15,12 @@ public class Interaccion {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    @Column(name = "id_interaccion")
+    private Long idInteraccion;
     
     @Column(name = "nombre_interaccion")
-    private String nombreInterracion;
+    private String nombreInteraccion;
 
-    @Column(name = "limite_interracion")
-    private Long limiteInterracion;
+    @Column(name = "limite_interaccion")
+    private Long limiteInteraccion;
 }

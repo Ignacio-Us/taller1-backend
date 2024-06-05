@@ -5,6 +5,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 import lombok.Data;
 
@@ -14,7 +16,8 @@ import lombok.Data;
 public class Counter {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    @Column(name = "id_counter")
+    private Long idCounter;
 
     @Column(name = "nombre")
     private String nombre;
@@ -25,8 +28,11 @@ public class Counter {
     @Column(name = "porcentaje_derrota")
     private Float porcentajeDerrota;
 
-    /*
-    @Column(name = "nacionalidad_id_nacionalidad")
-    private
-    */
+    @OneToOne
+    @JoinColumn(name = "nacionalidad_id_nacionalidad")
+    private Nacionalidad nacionalidad;
+    
+    @OneToOne
+    @JoinColumn(name = "especie_id_especie")
+    private Especie especie;
 }
